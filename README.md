@@ -1,5 +1,5 @@
-# ChatSailsReact
-Creando un chat realtime con Sails.js y React
+# ChatSails
+Creando un chat realtime con Sails.js
 
 **Parte 1: Sails.js**
 
