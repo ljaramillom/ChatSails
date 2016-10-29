@@ -22,7 +22,7 @@ A continuación iniciamos el servidor web con el siguiente comando:
 
 `sails lift`
 
-Sails usa por defecto el puerto 1337, por lo que si visita http://localhost:1337 debe obtener la página por defecto de Sails.
+Sails usa por defecto el puerto 1337, por lo que si visita **http://localhost:1337** debe obtener la página por defecto de Sails.
 
 - **Instalación Bower**
 
@@ -150,7 +150,6 @@ $(function(){
 		data.message = $("#message").val();
 		
 		io.socket.get('/send_message', data,  function(data, response) {
-
 		});
 
 		$("#message").val("");
@@ -174,7 +173,6 @@ Crear la carpeta **views** en la siguiente ruta: assets/styles/views en esta nue
 body{
 		background: #ededed;
 		font-family: 'Open Sans', sans-serif;
-
 	}
 
 	.navbar-header {
@@ -196,6 +194,7 @@ body{
 		background: #fff;
 		font-family: 'Open Sans', sans-serif;
 	}
+  
 	.table-message {
 		width: 100%;
 		max-width: 100%;
@@ -220,11 +219,7 @@ body{
 		height: 60px;
 	}
 
-	.content-form {
-		
-	}
-
-	.div-form {
+  .div-form {
 		height: 100%;
 		display: flex;
 		flex-direction: row;
@@ -306,12 +301,12 @@ En esta ocasión se usará `alter`, para modificar la migración se abre el arch
 
 `migrate: 'alter'`
 
-- **Ejecución del archivo**
+- **Chat Pioneras**
 
 Iniciamos el servidor web con el siguiente comando:
 
 `sails lift`
 
-Abrimos el navegador de nuestra preferencia y visitamos la siguiente dirección **http://localhost:1337**
+Abrimos el navegador y visitamos la siguiente dirección **http://localhost:1337**
 
-:satisfied: !Chat de Pioneras funcionando! :clap:
+                                  :satisfied: !Chat de Pioneras funcionando! :clap:
