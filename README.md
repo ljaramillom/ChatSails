@@ -38,5 +38,29 @@ Otro requisito para utilizar sails, es tener instalado en nuestro sistema el ges
 
 Grunt, es herramienta muy potente que nos ahorra mucho tiempo cuando estamos desarrollando. Se encarga de realizar tareas que son repetitivas, como minificar código, compilación, pruebas unitarias, etc. en definitiva hace nuestro trabajo más fácil.
 
+- **Estructura de la aplicación**
 
+chatSails
+|--api
+|--assets
+|--config
+|--node_modules
+|--tasks
+    |--config
+|--views
+
+- **Crear archivo bower.js** 
+
+Crear un archivo bower.js en la ruta tasks/config/bower.js e ingresar el siguiente código:
+
+```
+module.exports = function(grunt) {
+  grunt.config.set('bower', {
+    dev: {
+        dest: '.tmp/public',
+        js_dest: '.tmp/public/js',
+        css_dest: '.tmp/public/styles'
+    }
+  });
+```
 
