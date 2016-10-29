@@ -4,7 +4,7 @@ a [Sails](http://sailsjs.org) application
 
 - **Primeros Pasos:**
 *Nota*: Debes verificar el idioma de tu computador y tu configuracion de teclado. Por ejemplo en este repo me faltan tildes, porque no es mi computador, y no logro encontrar el acento. :P 
-1. Abrir en tu computador tu consola o terminal. En Windows en el buscador la encuentras como Simbolo del sistema, en Mac como Terminal. 
+- Abrir en tu computador tu consola o terminal. En Windows en el buscador la encuentras como Simbolo del sistema, en Mac como Terminal. 
 2. Revisa tu version de node y si esta instalado 
 `node -v`(Enter)
 3. Revisa tu version de Git
