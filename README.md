@@ -262,6 +262,7 @@ Se creará el archivo **controlador**, para ello ejecutaremos la siguiente sente
 - **Migraciones de las Bases de datos**
 
 Para las migraciones de la base de datos. Existen 3 tipos de migraciones:
+
      - `safe`: Nunca auto-migra la base de datos. Debe hacerse a mano
      - `alter`: Auto-migra, intentando mantener los datos actuales
      - `drop`: Vacía/elimina todos los datos y reconstruye los modelos cada vez que se realiza un Sails lift
