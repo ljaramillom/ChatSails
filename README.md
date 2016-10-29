@@ -170,9 +170,10 @@ $(function(){
 Crear la carpeta **views** en la siguiente ruta: assets/styles/views en esta nueva carpeta crear el archivo chat.css y escribir el siguiente código:
 
 ```
-body{
+	body{
 		background: #ededed;
 		font-family: 'Open Sans', sans-serif;
+
 	}
 
 	.navbar-header {
@@ -194,7 +195,6 @@ body{
 		background: #fff;
 		font-family: 'Open Sans', sans-serif;
 	}
-  
 	.table-message {
 		width: 100%;
 		max-width: 100%;
@@ -219,7 +219,11 @@ body{
 		height: 60px;
 	}
 
-  .div-form {
+	.content-form {
+		
+	}
+
+	.div-form {
 		height: 100%;
 		display: flex;
 		flex-direction: row;
