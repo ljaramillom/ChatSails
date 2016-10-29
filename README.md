@@ -42,17 +42,29 @@ Grunt, es herramienta muy potente que nos ahorra mucho tiempo cuando estamos des
 ```
 chatSails
 |--api
+    |--controllers
+    |--models
+    |--policies
+    |--responses
+    |--services
 |--assets
+    |--images
+    |--js
+    |--styles
+    |--templates
+|--bower_components
+    |--jquery
 |--config
 |--node_modules
 |--tasks
     |--config
+    |--register
 |--views
 ```
 
 - **Configuración de archivos** 
 
-Crear un archivo bower.js en la ruta: tasks/config/bower.js e ingresar el siguiente código:
+Crear un archivo **bower.js** en la ruta: tasks/config/bower.js e ingresar el siguiente código:
 
 ```
 module.exports = function(grunt) {
@@ -82,7 +94,7 @@ module.exports = function(grunt) {
   ]);
 };
 ```
-Crear el archivo chat.ejs en la siguiente ruta: views/chat.ejs con el siguiente código:
+Crear el archivo **chat.ejs** en la siguiente ruta: views/chat.ejs con el siguiente código:
 
 ```
 <div>
@@ -110,7 +122,7 @@ Crear el archivo chat.ejs en la siguiente ruta: views/chat.ejs con el siguiente 
 	</div>
 ```
 
-Configurar el archivo routes.js en la siguiente ruta: /config/routes.js agregando el siguiente código:
+Configurar el archivo **routes.js** en la siguiente ruta: /config/routes.js agregando el siguiente código:
 
 ```
 module.exports.routes = {
@@ -260,18 +272,6 @@ Se creará el archivo **controlador**, para ello ejecutaremos la siguiente sente
 
 `sails generate api Chat`
 
-- **Migraciones de las Bases de datos**
-
-Para las migraciones de la base de datos. Existen 3 tipos de migraciones:
-
-     - `safe`: Nunca auto-migra la base de datos. Debe hacerse a mano
-     - `alter`: Auto-migra, intentando mantener los datos actuales
-     - `drop`: Vacía/elimina todos los datos y reconstruye los modelos cada vez que se realiza un Sails lift
-
-En esta ocasión se usará `alter`, para modificar la migración se abre el archivo: config/models.js y se descomenta la línea 30
-
-`migrate: 'alter'`
-
 - **Configuración de archivo ChatController
 
 En la siguiente ruta: api/controllers/ChatController.js en esta nueva carpeta crear el archivo chat.css con el siguiente código:
@@ -294,3 +294,15 @@ En la siguiente ruta: api/controllers/ChatController.js en esta nueva carpeta cr
 
  };
 ```
+
+- **Migraciones de las Bases de datos**
+
+Para las migraciones de la base de datos. Existen 3 tipos de migraciones:
+
+     1. safe: Nunca auto-migra la base de datos. Debe hacerse a mano
+     2. alter: Auto-migra, intentando mantener los datos actuales
+     3. drop: Vacía/elimina todos los datos y reconstruye los modelos cada vez que se realiza un Sails lift
+
+En esta ocasión se usará `alter`, para modificar la migración se abre el archivo: config/models.js y se descomenta la línea 30
+
+`migrate: 'alter'`
