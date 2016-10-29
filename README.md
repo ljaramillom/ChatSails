@@ -28,7 +28,7 @@ Sails usa por defecto el puerto 1337, por lo que si visita http://localhost:1337
 
 Con Bower podemos descargar y actualizar todo tipo de librerías, frameworks, plugins, etc., pero sin tener que preocuparnos por descargarlos y subirlos a mano nosotros mismos. 
 
-`npm install bower --save`
+`npm install bower -g`
 
 - **Grunt**
 
@@ -49,9 +49,9 @@ chatSails
     |--config
 |--views
 
-- **Crear archivo bower.js** 
+- **Configuración de archivos** 
 
-Crear un archivo bower.js en la ruta tasks/config/bower.js e ingresar el siguiente código:
+Crear un archivo bower.js en la ruta: tasks/config/bower.js e ingresar el siguiente código:
 
 ```
 module.exports = function(grunt) {
@@ -62,5 +62,233 @@ module.exports = function(grunt) {
         css_dest: '.tmp/public/styles'
     }
   });
+ 
+  grunt.loadNpmTasks('grunt-bower');
+ 
+};
+```
+Agregar **'bower:dev',** en el archivo compileAssets.js de la siguiente ruta: /tasks/register/compileAssets.js 
+
+```
+module.exports = function(grunt) {
+  grunt.registerTask('compileAssets', [
+    'clean:dev',
+    'bower:dev',
+    'jst:dev',
+    'less:dev',
+    'copy:dev',
+    'coffee:dev'
+  ]);
+};
+```
+Crear el archivo chat.ejs en la siguiente ruta: views/chat.ejs con el siguiente código:
+
+```
+<div>
+	<div class="navbar-header">Chat Sails by Pioneras Developers</div>
+	<div class="col-md-12" style="padding:100px">
+		<table id="table-message" class="table-message">
+			<tbody></tbody>
+		</table>
+
+		</div>
+
+		<div class="navbar">
+			<div class="div-form">
+					<div class="child-form">
+						<input id="name" type="text" placeholder="Nombre">
+					</div>
+
+					<div  class="child-form">
+						<input id="message" type="text" placeholder="Mensaje">
+					</div>
+					<button id="send" class="btn-send child-form">Enviar</button>  
+			</div>
+		</div>
+
+	</div>
 ```
 
+Configurar el archivo routes.js en la siguiente ruta: /config/routes.js agregando el siguiente código:
+
+```
+module.exports.routes = {
+
+  'get /': {
+    view: 'chat'
+  },
+  'get /join_chat': 'ChatController.joinUser',
+  'get /send_message': 'ChatController.sendMessage',
+};
+```
+- **Instalación de jQuery**
+
+`bower install jquery --save`
+
+- **Creación de carpetas**
+
+Crear la carpeta **views** en la siguiente ruta: assets/js/views en esta nueva carpeta crear el archivo chat.js con el siguiente código:
+
+```
+$(function(){
+	$("#send").click(function(){
+		//enviar mensaje escrito
+		var data = {};
+		data.user = $("#name").val();
+		data.message = $("#message").val();
+		
+		io.socket.get('/send_message', data,  function(data, response) {
+
+		});
+
+		$("#message").val("");
+		$("#message").focus();
+	});
+
+	//matricular usuario al chat
+	io.socket.get('/join_chat', function(data, response) {
+	});
+
+	//recibir mensaje
+	io.socket.on('message', function(data) {
+		var tr = $("<tr><td class='td'><strong>" + data.user + " : " + "</strong>" + data.message + "</td></tr>");
+		$("#table-message").find("tbody").append(tr);
+	});
+});
+```
+Crear la carpeta **views** en la siguiente ruta: assets/styles/views en esta nueva carpeta crear el archivo chat.css con el siguiente código:
+
+```
+body{
+		background: #ededed;
+		font-family: 'Open Sans', sans-serif;
+
+	}
+
+	.navbar-header {
+		font-family: 'Open Sans', sans-serif;
+		font-size: 33px;
+		text-align: center;
+		color: #FF8410;
+		font-style: italic;
+		font-weight: bold;
+		padding: 2px;
+		text-shadow: 1px 2px #999;
+		height: 60px;
+	}
+
+	.chat_message {
+		padding: 10px;
+		color: #000;
+		font-size: 15px;
+		background: #fff;
+		font-family: 'Open Sans', sans-serif;
+	}
+	.table-message {
+		width: 100%;
+		max-width: 100%;
+		margin-bottom: 23px;
+	}
+
+	.td {
+		padding: 5px;
+		border-top: 1px solid #dddddd;
+		height: 30px;
+		background: white;
+	}
+
+	.navbar {
+		position: fixed;
+		right: 0;
+		left: 0;
+		z-index: 1030;
+		background-color: #FF8410; 
+		bottom: 0;
+		margin-bottom: 0;
+		height: 60px;
+	}
+
+	.content-form {
+		
+	}
+
+	.div-form {
+		height: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.child-form {
+		height: 30px;
+		margin-right: 20px;
+		border-bottom: 1px solid white;
+	}
+
+	.child-form input {
+		height: 30px;
+		background-color: rgba(255,255,255,0);
+    	border: 0;
+    	color: white;
+    	font-family: 'Open Sans', sans-serif;
+    	font-size: 15px;
+	}
+
+	.child-form input:focus {
+		outline: none;
+	}
+
+	::-webkit-input-placeholder {
+		color: rgba(255,255,255,0.5);
+	}
+
+	.btn-send {
+		text-transform: uppercase;
+		box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+		border-right: none;
+		border-bottom: none;
+        border-radius: 5px;
+ 		transition: all 2s ease;
+        width: 10%;
+	}
+```
+- **Creación de un API**
+
+Se creará el archivo **controlador**, para ello ejecutaremos la siguiente sentencia en la consola:
+
+`sails generate api Chat`
+
+- **Migraciones de las Bases de datos**
+
+Para las migraciones de la base de datos. Existen 3 tipos de migraciones:
+     - `safe`: Nunca auto-migra la base de datos. Debe hacerse a mano
+     - `alter`: Auto-migra, intentando mantener los datos actuales
+     - `drop`: Vacía/elimina todos los datos y reconstruye los modelos cada vez que se realiza un Sails lift
+
+En esta ocasión se usará `alter`, para modificar la migración se abre el archivo: config/models.js y se descomenta la línea 30
+
+`migrate: 'alter'`
+
+- **Configuración de archivo ChatController
+
+En la siguiente ruta: api/controllers/ChatController.js en esta nueva carpeta crear el archivo chat.css con el siguiente código:
+
+```
+ module.exports = {
+
+ 	joinUser: function(req, res){
+ 		console.info("Se une un usuario nuevo al chat");
+ 		if (!req.isSocket) {return res.badRequest();}
+ 		sails.sockets.join(req, 'PionerasDev');
+ 	},
+
+ 	sendMessage: function(req, res){
+ 		var data = {};
+ 		data.user = req.param("user");
+ 		data.message = req.param("message");
+		sails.sockets.broadcast('PionerasDev', 'message', data);
+ 	}
+
+ };
+```
