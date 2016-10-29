@@ -39,7 +39,7 @@ Otro requisito para utilizar sails, es tener instalado en nuestro sistema el ges
 Grunt, es herramienta muy potente que nos ahorra mucho tiempo cuando estamos desarrollando. Se encarga de realizar tareas que son repetitivas, como minificar código, compilación, pruebas unitarias, etc. en definitiva hace nuestro trabajo más fácil.
 
 - **Estructura de la aplicación**
-
+```
 chatSails
 |--api
 |--assets
@@ -48,6 +48,7 @@ chatSails
 |--tasks
     |--config
 |--views
+```
 
 - **Configuración de archivos** 
 
