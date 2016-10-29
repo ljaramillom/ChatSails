@@ -309,4 +309,4 @@ Iniciamos el servidor web con el siguiente comando:
 
 Abrimos el navegador y visitamos la siguiente dirección **http://localhost:1337**
 
-                                  :satisfied: !Chat de Pioneras funcionando! :clap:
+:satisfied: !Chat de Pioneras funcionando! :clap:
