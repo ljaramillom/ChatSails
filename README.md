@@ -2,11 +2,36 @@
 
 a [Sails](http://sailsjs.org) application
 
+- **Primeros Pasos:**
+
+*Nota*: Debes verificar el idioma de tu computador y tu configuracion de teclado. Por ejemplo en este repo me faltan tildes, porque no es mi computador, y no logro encontrar el acento. :P 
+
+Abrir en tu computador tu consola o terminal. En Windows en el buscador la encuentras como Simbolo del sistema, en Mac como Terminal. 
+
+Revisa tu version de node y si esta instalado 
+`node -v`(Enter)
+
+Revisa tu version de Git
+`git -v`(Enter)
+
+Crea una carpeta en tu escritorio/Desktop: Project Sails 
+
+Nota: Aqui puedes verificar como se llama tu escritorio con el comando `dir`
+
+Abre la carpeta en tu terminal con el comando:
+`cd Desktop`(Enter)
+Luego...
+
+`cd Project Sails`(Enter)
+Ya alli comienzas a instalar: 
+
 - **Instalación:**
 
 Para instalar Sails, es bastante simple. Los requisitos son tener Node.js instalado y también la NPM, que viene con Node. Entonces se debe escribir el siguiente comando en el terminal:
 
 `npm -g install sails`
+
+*Nota*: Aqui te saldra un lindo barquito :) y una instruccion en tu terminal que dice CTRL + C (Enter) al ejecutar te apaece S/N, Es decir Si o No, le das S(Si),y esperas que ejecute. Y sigue los pasos...
 
 - **Crear un nuevo projecto:**
 
@@ -37,6 +62,8 @@ Otro requisito para utilizar sails, es tener instalado en nuestro sistema el ges
 `npm install grunt-bower --save`
 
 Grunt, es herramienta muy potente que nos ahorra mucho tiempo cuando estamos desarrollando. Se encarga de realizar tareas que son repetitivas, como minificar código, compilación, pruebas unitarias, etc. en definitiva hace nuestro trabajo más fácil.
+
+*Nota*: Aqui es importante que vuelvas a tu carpeta de escritorio, abrir tu editor de texto (Sublime /Atom) y arrastres la carpeta de Project Sails. Te abriran la estructura de la aplicacion y podras ver los ficheros mediante tabs.  
 
 - **Estructura de la aplicación**
 ```
@@ -93,6 +120,9 @@ module.exports = function(grunt) {
   ]);
 };
 ```
+**NOTA**
+En Views dentro del editor, nos paramos en el archivo llamado homepag, con CTRL A seleccionamos, suprimimos, le cambiamos el nombre a chat.ejs y pegamos el codigo mencionado a continuacion.
+
 Crear el archivo **chat.ejs** en la siguiente ruta: views/chat.ejs y escribir el siguiente código:
 
 ```
@@ -134,8 +164,12 @@ module.exports.routes = {
 };
 ```
 - **Instalación de jQuery**
+Ir a la consola y ejecutar
 
 `bower install jquery --save`
+
+**NOTA**
+Aqui volvemos a Sublime.
 
 - **Creación de carpetas**
 
