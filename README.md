@@ -53,7 +53,6 @@ chatSails
     |--styles
     |--templates
 |--bower_components
-    |--jquery
 |--config
 |--node_modules
 |--tasks
@@ -64,7 +63,7 @@ chatSails
 
 - **Configuración de archivos** 
 
-Crear un archivo **bower.js** en la ruta: tasks/config/bower.js e ingresar el siguiente código:
+Crear un archivo **bower.js** en la ruta: tasks/config/bower.js y escribir el siguiente código:
 
 ```
 module.exports = function(grunt) {
@@ -94,7 +93,7 @@ module.exports = function(grunt) {
   ]);
 };
 ```
-Crear el archivo **chat.ejs** en la siguiente ruta: views/chat.ejs con el siguiente código:
+Crear el archivo **chat.ejs** en la siguiente ruta: views/chat.ejs y escribir el siguiente código:
 
 ```
 <div>
@@ -122,7 +121,7 @@ Crear el archivo **chat.ejs** en la siguiente ruta: views/chat.ejs con el siguie
 	</div>
 ```
 
-Configurar el archivo **routes.js** en la siguiente ruta: /config/routes.js agregando el siguiente código:
+Configurar el archivo **routes.js** en la siguiente ruta: /config/routes.js y escribir el siguiente código:
 
 ```
 module.exports.routes = {
@@ -140,7 +139,7 @@ module.exports.routes = {
 
 - **Creación de carpetas**
 
-Crear la carpeta **views** en la siguiente ruta: assets/js/views en esta nueva carpeta crear el archivo chat.js con el siguiente código:
+Crear la carpeta **views** en la siguiente ruta: assets/js/views en esta nueva carpeta crear el archivo chat.js y escribir el siguiente código:
 
 ```
 $(function(){
@@ -169,7 +168,7 @@ $(function(){
 	});
 });
 ```
-Crear la carpeta **views** en la siguiente ruta: assets/styles/views en esta nueva carpeta crear el archivo chat.css con el siguiente código:
+Crear la carpeta **views** en la siguiente ruta: assets/styles/views en esta nueva carpeta crear el archivo chat.css y escribir el siguiente código:
 
 ```
 body{
@@ -272,9 +271,9 @@ Se creará el archivo **controlador**, para ello ejecutaremos la siguiente sente
 
 `sails generate api Chat`
 
-- **Configuración de archivo ChatController
+- **Configuración de archivo ChatController**
 
-En la siguiente ruta: api/controllers/ChatController.js en esta nueva carpeta crear el archivo chat.css con el siguiente código:
+En la siguiente ruta: api/controllers/ChatController.js en esta nueva carpeta crear el archivo chat.css y escribir el siguiente código:
 
 ```
  module.exports = {
@@ -306,3 +305,13 @@ Para las migraciones de la base de datos. Existen 3 tipos de migraciones:
 En esta ocasión se usará `alter`, para modificar la migración se abre el archivo: config/models.js y se descomenta la línea 30
 
 `migrate: 'alter'`
+
+- **Ejecución del archivo**
+
+Iniciamos el servidor web con el siguiente comando:
+
+`sails lift`
+
+Abrimos el navegador de nuestra preferencia y visitamos la siguiente dirección http:localhost:1337
+
+!Chat de Pioneras funcionando! :)
