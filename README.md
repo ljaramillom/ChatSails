@@ -120,6 +120,9 @@ module.exports = function(grunt) {
   ]);
 };
 ```
+**NOTA**
+En Views dentro del editor, nos paramos en el archivo llamado homepag, con CTRL A seleccionamos, suprimimos, le cambiamos el nombre a chat.ejs y pegamos el codigo mencionado a continuacion.
+
 Crear el archivo **chat.ejs** en la siguiente ruta: views/chat.ejs y escribir el siguiente código:
 
 ```
@@ -161,16 +164,12 @@ module.exports.routes = {
 };
 ```
 - **Instalación de jQuery**
+Ir a la consola y ejecutar
 
 `bower install jquery --save`
 
-
-
-
-
-
-
-
+**NOTA**
+Aqui volvemos a Sublime.
 
 - **Creación de carpetas**
 
