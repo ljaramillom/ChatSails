@@ -3,6 +3,7 @@
 a [Sails](http://sailsjs.org) application
 
 - **Primeros Pasos:**
+
 *Nota*: Debes verificar el idioma de tu computador y tu configuracion de teclado. Por ejemplo en este repo me faltan tildes, porque no es mi computador, y no logro encontrar el acento. :P 
 
 Abrir en tu computador tu consola o terminal. En Windows en el buscador la encuentras como Simbolo del sistema, en Mac como Terminal. 
@@ -14,6 +15,7 @@ Revisa tu version de Git
 `git -v`(Enter)
 
 Crea una carpeta en tu escritorio/Desktop: Project Sails 
+
 Nota: Aqui puedes verificar como se llama tu escritorio con el comando `dir`
 
 Abre la carpeta en tu terminal con el comando:
