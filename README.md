@@ -4,16 +4,22 @@ a [Sails](http://sailsjs.org) application
 
 - **Primeros Pasos:**
 *Nota*: Debes verificar el idioma de tu computador y tu configuracion de teclado. Por ejemplo en este repo me faltan tildes, porque no es mi computador, y no logro encontrar el acento. :P 
-+ Abrir en tu computador tu consola o terminal. En Windows en el buscador la encuentras como Simbolo del sistema, en Mac como Terminal. 
-+ Revisa tu version de node y si esta instalado 
+
+Abrir en tu computador tu consola o terminal. En Windows en el buscador la encuentras como Simbolo del sistema, en Mac como Terminal. 
+
+Revisa tu version de node y si esta instalado 
 `node -v`(Enter)
-+ Revisa tu version de Git
+
+Revisa tu version de Git
 `git -v`(Enter)
-+ Crea una carpeta en tu escritorio/Desktop: Project Sails 
+
+Crea una carpeta en tu escritorio/Desktop: Project Sails 
 Nota: Aqui puedes verificar como se llama tu escritorio con el comando `dir`
-+ Abre la carpeta en tu terminal con el comando:
+
+Abre la carpeta en tu terminal con el comando:
 `cd Desktop`(Enter)
 Luego...
+
 `cd Project Sails`(Enter)
 Ya alli comienzas a instalar: 
 
