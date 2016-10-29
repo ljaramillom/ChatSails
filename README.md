@@ -312,6 +312,6 @@ Iniciamos el servidor web con el siguiente comando:
 
 `sails lift`
 
-Abrimos el navegador de nuestra preferencia y visitamos la siguiente dirección http://localhost:1337 
+Abrimos el navegador de nuestra preferencia y visitamos la siguiente dirección **http://localhost:1337**
 
 :satisfied: !Chat de Pioneras funcionando! :clap:
