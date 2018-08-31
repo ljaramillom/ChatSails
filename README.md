@@ -4,11 +4,11 @@ a [Sails](http://sailsjs.org) application
 
 - **Primeros Pasos:**
 
-*Nota*: Debes verificar el idioma de tu computador y tu configuracion de teclado. Por ejemplo en este repo me faltan tildes, porque no es mi computador, y no logro encontrar el acento. :P 
+*Nota*: Debes verificar el idioma de tu computador y la configuración de teclado.
 
 Abrir en tu computador tu consola o terminal. En Windows en el buscador la encuentras como Simbolo del sistema, en Mac como Terminal. 
 
-Revisa tu version de node y si esta instalado 
+Revisa tu versión de Node.js
 `node -v`(Enter)
 
 Revisa tu version de Git
@@ -23,7 +23,7 @@ Abre la carpeta en tu terminal con el comando:
 Luego...
 
 `cd Project Sails`(Enter)
-Ya alli comienzas a instalar: 
+Ya allí comienzas a instalar: 
 
 - **Instalación:**
 
@@ -31,9 +31,9 @@ Para instalar Sails, es bastante simple. Los requisitos son tener Node.js instal
 
 `npm -g install sails`
 
-*Nota*: Aqui te saldra un lindo barquito :) y una instruccion en tu terminal que dice CTRL + C (Enter) al ejecutar te apaece S/N, Es decir Si o No, le das S(Si),y esperas que ejecute. Y sigue los pasos...
+*Nota*: Aqui te saldrá un lindo barquito :) y una instrucción en tu terminal que dice CTRL + C (Enter) al ejecutar te aparece S/N, Es decir Si o No, le das S(Sí),y esperas que ejecute. Y sigue los pasos...
 
-- **Crear un nuevo projecto:**
+- **Crear un nuevo proyecto:**
 
 Con el fin de crear un nuevo proyecto de Sails, se utiliza el siguiente comando:
 
@@ -63,7 +63,7 @@ Otro requisito para utilizar sails, es tener instalado en nuestro sistema el ges
 
 Grunt, es herramienta muy potente que nos ahorra mucho tiempo cuando estamos desarrollando. Se encarga de realizar tareas que son repetitivas, como minificar código, compilación, pruebas unitarias, etc. en definitiva hace nuestro trabajo más fácil.
 
-*Nota*: Aqui es importante que vuelvas a tu carpeta de escritorio, abrir tu editor de texto (Sublime /Atom) y arrastres la carpeta de Project Sails. Te abriran la estructura de la aplicacion y podras ver los ficheros mediante tabs.  
+*Nota*: Aquí es importante que vuelvas a tu carpeta de escritorio, abrir tu editor de texto (Sublime/Atom) y arrastres la carpeta de Project Sails. Te abrirán la estructura de la aplicación y podrás ver los ficheros mediante tabs.  
 
 - **Estructura de la aplicación**
 ```
@@ -121,7 +121,7 @@ module.exports = function(grunt) {
 };
 ```
 **NOTA**
-En Views dentro del editor, nos paramos en el archivo llamado homepag, con CTRL A seleccionamos, suprimimos, le cambiamos el nombre a chat.ejs y pegamos el codigo mencionado a continuacion.
+En Views dentro del editor, nos ubicamos en el archivo llamado homepag, con CTRL+A seleccionamos, suprimimos, le cambiamos el nombre a chat.ejs y pegamos el código mencionado a continuación.
 
 Crear el archivo **chat.ejs** en la siguiente ruta: views/chat.ejs y escribir el siguiente código:
 
@@ -169,7 +169,7 @@ Ir a la consola y ejecutar
 `bower install jquery --save`
 
 **NOTA**
-Aqui volvemos a Sublime.
+Aquí volvemos a Sublime.
 
 - **Creación de carpetas**
 
